@@ -27,5 +27,11 @@ def upload():
 
     return f"File {filename} uploaded!"
 
+@app.route('/flag')
+def show_flag():
+    with open("static/creds.json") as f:
+        creds = json.load(f)
+        return creds
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
