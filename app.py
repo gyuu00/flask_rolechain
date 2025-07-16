@@ -7,8 +7,6 @@ app = Flask(__name__)
 UPLOAD_FOLDER = './uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-bucket_name = "flask-rce-bucket"
-
 @app.route('/')
 def index():
     return render_template('index.html')
